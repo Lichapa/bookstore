@@ -4,7 +4,6 @@ function Books() {
   return (
     <div className="container">
       <div>
-        <h2>Welcome to our page!</h2>
         <ul>
           <li>
             Book 1 <button>Remove</button>{' '}
