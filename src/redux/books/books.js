@@ -6,13 +6,16 @@ function Books() {
       <div>
         <ul>
           <li>
-            Book 1 <button>Remove</button>{' '}
+            Book 1
+            <button type="button">Remove</button>
           </li>
           <li>
-            Book 2 <button>Remove</button>
+            Book 2
+            <button type="button">Remove</button>
           </li>
           <li>
-            Book 3 <button>Remove</button>
+            Book 3
+            <button type="button">Remove</button>
           </li>
         </ul>
       </div>
@@ -32,7 +35,7 @@ function Books() {
             placeholder="Category"
             required
           />
-          <button>Submit</button>
+          <button type="button">Submit</button>
         </form>
         <datalist id="category">
           <option>Javascript</option>

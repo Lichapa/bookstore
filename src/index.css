@@ -4,26 +4,24 @@ body {
 }
 
 .container,
-.nav{
-   padding: 5px 30px;
+.nav {
+  padding: 5px 30px;
 }
 
 .nav {
   display: flex;
   flex-direction: row;
- 
 }
 
 .nav-item {
   display: flex;
   flex-direction: row;
-  
-}
-
-.nav-item>li {
-  margin-left: 10px;
 }
 
 li {
   list-style-type: none;
+}
+
+.nav-item > li {
+  margin-left: 10px;
 }
