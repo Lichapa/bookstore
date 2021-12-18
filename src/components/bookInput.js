@@ -46,6 +46,7 @@ const BookForm = () => {
           type="text"
           id="input-book-category"
           name="category"
+          list="categories"
           placeholder="Book Category"
           value={category}
           onChange={onCategoryChange}
@@ -56,6 +57,15 @@ const BookForm = () => {
           ADD BOOK
         </button>
       </form>
+      <datalist id="categories">
+        <option>Comedy</option>
+        <option>Programming</option>
+        <option>Sci-Fi</option>
+        <option>Religion</option>
+        <option>Adventure</option>
+        <option>Education</option>
+        <option>Music</option>
+      </datalist>
     </div>
   );
 };
