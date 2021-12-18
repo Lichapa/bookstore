@@ -4,6 +4,7 @@ import {
 } from 'react-router-dom';
 import Categories from './components/categories';
 import Books from './components/displayBooks';
+import user from './user.png';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,19 +17,26 @@ class App extends React.Component {
       <Router>
         <div>
           <nav className="nav">
-            <h1>Bookstore CMS</h1>
+            <h1 className="nav-header">Bookstore CMS</h1>
             <ul className="nav-item">
               <li>
-                <Link to="/books">BOOKS</Link>
+                <Link to="/">BOOKS</Link>
               </li>
               <li>
                 <Link to="/categories">CATEGORIES</Link>
               </li>
             </ul>
+            <img
+              src={user}
+              alt="User Icon"
+              width="50"
+              height="50"
+              className="nav-image"
+            />
           </nav>
         </div>
         <Routes>
-          <Route path="/books" element={<Books />} />
+          <Route exact path="/" element={<Books />} />
           <Route exact path="/categories" element={<Categories />} />
         </Routes>
       </Router>
