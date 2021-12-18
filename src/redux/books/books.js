@@ -1,49 +1,28 @@
-import React from 'react';
+const ADD_BOOK = 'bookStore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
-function Books() {
-  return (
-    <div className="container">
-      <div>
-        <ul>
-          <li>
-            Book 1
-            <button type="button">Remove</button>
-          </li>
-          <li>
-            Book 2
-            <button type="button">Remove</button>
-          </li>
-          <li>
-            Book 3
-            <button type="button">Remove</button>
-          </li>
-        </ul>
-      </div>
+const initialState = [];
 
-      <div className="books-form">
-        <form>
-          <input
-            type="text"
-            className="book-title"
-            placeholder="Book title"
-            required
-          />
-          <input
-            name="categories"
-            id="categories"
-            list="category"
-            placeholder="Category"
-            required
-          />
-          <button type="button">Submit</button>
-        </form>
-        <datalist id="category">
-          <option>Javascript</option>
-          <option>React</option>
-          <option>Ruby</option>
-        </datalist>
-      </div>
-    </div>
-  );
-}
-export default Books;
+export const addBook = (payload) => ({
+  type: ADD_BOOK,
+  payload,
+});
+
+export const removeBook = (payload) => ({
+  type: REMOVE_BOOK,
+  payload,
+});
+
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case ADD_BOOK:
+      return [...state, action.payload];
+
+    case REMOVE_BOOK:
+      return state.filter((book) => book.id !== action.payload.id);
+    default:
+      return state;
+  }
+};
+
+export default reducer;
