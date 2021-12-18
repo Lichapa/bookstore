@@ -15,6 +15,10 @@ This project is used to display a list of books. Users can add/remove books from
 - Redux
 - API
 
+## Live Demo
+
+[Live Demo Link](https://lichapa-bookstore.netlify.app/)
+
 ## Getting started
 
 1. Clone the project
