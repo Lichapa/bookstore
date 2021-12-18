@@ -2,8 +2,8 @@ import React from 'react';
 import {
   BrowserRouter as Router, Routes, Route, Link,
 } from 'react-router-dom';
-import Books from './redux/books/books';
-import Categories from './redux/categories/categories';
+import Categories from './components/categories';
+import Books from './components/displayBooks';
 
 class App extends React.Component {
   constructor(props) {
@@ -29,7 +29,7 @@ class App extends React.Component {
         </div>
         <Routes>
           <Route path="/books" element={<Books />} />
-          <Route path="/categories" element={<Categories />} />
+          <Route exact path="/categories" element={<Categories />} />
         </Routes>
       </Router>
     );
