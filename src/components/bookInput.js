@@ -17,12 +17,16 @@ const BookForm = (props) => {
   const handleBtn = (e) => {
     e.preventDefault();
     const { addBook } = props;
-
-    addBook(bookForm);
-    setBookForm({
-      title: '',
-      author: '',
-    });
+    if (bookForm.title === '' || bookForm.author === '') {
+      alert('Fill all fields');
+    } else {
+      // formValid(bookForm);
+      addBook(bookForm);
+      setBookForm({
+        title: '',
+        author: '',
+      });
+    }
   };
 
   return (
